@@ -20,7 +20,7 @@ export default function Page() {
           </div>
           <div className="p-6">
             <p className="text-sm text-white/75">
-              Company profile for a renewable energy company, focused on trust & credibility. (No external links—demo upon request.)
+              Company profile for a renewable energy company, focused on trust & credibility.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {["WordPress", "Landing Page", "Performance"].map((t) => (

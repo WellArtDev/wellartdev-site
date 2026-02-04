@@ -36,11 +36,16 @@ export default function Home() {
             <a className="hover:text-white" href="/blog">
               Blog
             </a>
-            <a className="hover:text-white" href="/en">
-              EN
-            </a>
             <a className="hover:text-white" href="#contact">
               Kontak
+            </a>
+            <a
+              className="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-base hover:bg-white/10"
+              href="/en"
+              aria-label="Switch to English"
+              title="English"
+            >
+              🇬🇧
             </a>
           </nav>
         </header>

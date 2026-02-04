@@ -20,7 +20,7 @@ export default function Page() {
           </div>
           <div className="p-6">
             <p className="text-sm text-white/75">
-              Website instansi: nunukan.imigrasi.go.id — informatif, rapi, dan mudah diakses. (Tanpa link eksternal—demo by request.)
+              Website instansi: nunukan.imigrasi.go.id — informatif, rapi, dan mudah diakses.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {["Web CMS", "Accessibility", "Content"].map((t) => (

@@ -36,8 +36,13 @@ export default function HomeEn() {
             <a className="hover:text-white" href="#contact">
               Contact
             </a>
-            <Link className="hover:text-white" href="/">
-              ID
+            <Link
+              className="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-base hover:bg-white/10"
+              href="/"
+              aria-label="Ganti ke Bahasa Indonesia"
+              title="Bahasa Indonesia"
+            >
+              🇮🇩
             </Link>
           </nav>
         </header>

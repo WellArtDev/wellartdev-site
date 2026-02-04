@@ -20,7 +20,7 @@ export default function Page() {
           </div>
           <div className="p-6">
             <p className="text-sm text-white/75">
-              Website produk & katalog untuk audio equipment / distributor. (Tanpa link eksternal—demo bisa by request.)
+              Website produk & katalog untuk audio equipment / distributor.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {["WordPress", "WooCommerce", "SEO"].map((t) => (

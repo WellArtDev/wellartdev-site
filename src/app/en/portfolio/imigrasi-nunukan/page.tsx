@@ -20,7 +20,7 @@ export default function Page() {
           </div>
           <div className="p-6">
             <p className="text-sm text-white/75">
-              Government website — clean, informative, and accessible. (No external links—demo upon request.)
+              Government website — clean, informative, and accessible.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {["Web CMS", "Accessibility", "Content"].map((t) => (
