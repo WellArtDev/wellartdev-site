@@ -2,9 +2,28 @@ import Link from "next/link";
 
 const items = [
   {
-    title: "(Coming soon) Case Study #1",
-    desc: "Template sudah siap—tinggal isi project pertamamu.",
+    title: "Mipro Indonesia",
+    desc: "Website produk & katalog (audio equipment / distributor).",
+    href: "https://mipro.co.id/",
+    external: true,
+  },
+  {
+    title: "Agra Surya Energy",
+    desc: "Company profile renewable energy.",
+    href: "https://agrasuryaenergy.com/",
+    external: true,
+  },
+  {
+    title: "PBS Indonesia",
+    desc: "(Status: domain/hosting suspended) — bisa kita revive kapan aja.",
+    href: "https://pbs-indonesia.com/",
+    external: true,
+  },
+  {
+    title: "Template Case Study",
+    desc: "Template sudah siap—tinggal isi project kamu biar jadi case study yang jualan.",
     href: "/portfolio/case-study-template",
+    external: false,
   },
 ];
 
@@ -23,16 +42,27 @@ export default function PortfolioPage() {
         </p>
 
         <div className="mt-8 grid gap-4">
-          {items.map((x) => (
-            <Link
-              key={x.title}
-              href={x.href}
-              className="rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10"
-            >
-              <div className="text-lg font-semibold">{x.title}</div>
-              <div className="mt-2 text-sm text-white/70">{x.desc}</div>
-            </Link>
-          ))}
+          {items.map((x) => {
+            const card = (
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:bg-white/10">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="text-lg font-semibold">{x.title}</div>
+                  {x.external ? <span className="text-xs text-white/50">external</span> : null}
+                </div>
+                <div className="mt-2 text-sm text-white/70">{x.desc}</div>
+              </div>
+            );
+
+            return x.external ? (
+              <a key={x.title} href={x.href} target="_blank" rel="noreferrer" className="block">
+                {card}
+              </a>
+            ) : (
+              <Link key={x.title} href={x.href} className="block">
+                {card}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>
