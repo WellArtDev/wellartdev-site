@@ -39,6 +39,78 @@ body {
   animation: gradient-pan 7s ease-in-out infinite;
 }
 
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  filter: blur(6px);
+  transition: opacity 700ms ease, transform 700ms ease, filter 700ms ease;
+}
+
+.reveal--in {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
+
+/* Floating orbs */
+@keyframes orb-float {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.orb {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 999px;
+  filter: blur(60px);
+  opacity: 0.22;
+  animation: orb-float 7s ease-in-out infinite;
+}
+
+.orb-a {
+  left: -160px;
+  top: -120px;
+  background: radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.75), transparent 60%);
+}
+
+.orb-b {
+  right: -160px;
+  top: 80px;
+  animation-duration: 9s;
+  background: radial-gradient(circle at 30% 30%, rgba(236, 72, 153, 0.65), transparent 60%);
+}
+
+.orb-c {
+  left: 25%;
+  bottom: -220px;
+  animation-duration: 11s;
+  background: radial-gradient(circle at 30% 30%, rgba(34, 211, 238, 0.55), transparent 60%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb {
+    animation: none;
+  }
+}
+
 /* Glow border card */
 .glow-card {
   position: relative;

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Splash } from "@/components/Splash";
 import { Background } from "@/components/Background";
 import { BackToTop } from "@/components/BackToTop";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { Proof } from "@/components/sections/Proof";
@@ -51,10 +52,18 @@ export default function Home() {
         </header>
 
         <main className="mt-8 space-y-6">
-          <Hero />
-          <Services />
-          <Proof />
-          <CTA />
+          <ScrollReveal>
+            <Hero />
+          </ScrollReveal>
+          <ScrollReveal>
+            <Services />
+          </ScrollReveal>
+          <ScrollReveal>
+            <Proof />
+          </ScrollReveal>
+          <ScrollReveal>
+            <CTA />
+          </ScrollReveal>
         </main>
 
         <footer className="mt-10 border-t border-white/10 py-8 text-xs text-white/50">
