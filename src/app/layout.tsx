@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/wellartdev-logo.png",
+    icon: "/wellartdev-logo.svg",
   },
 
   openGraph: {
