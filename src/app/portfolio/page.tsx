@@ -55,7 +55,10 @@ export default function PortfolioPage() {
           <div>
             <p className="text-xs font-semibold tracking-[0.22em] text-white/60">OUR WORK</p>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Featured <span className="text-cyan-300">Portfolio</span>
+              Featured{" "}
+              <span className="animate-gradient bg-gradient-to-r from-indigo-300 via-fuchsia-300 to-cyan-200 bg-clip-text text-transparent">
+                Portfolio
+              </span>
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/70">
               Pilihan project yang nunjukin gaya kerja kita: modern, rapi, dan fokus ke trust + hasil.
@@ -66,10 +69,10 @@ export default function PortfolioPage() {
           </Link>
         </div>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {items.map((x) => {
             const top = x.image ? (
-              <div className="relative aspect-[16/10] w-full overflow-hidden">
+              <div className="relative aspect-[16/9] w-full overflow-hidden">
                 <Image
                   src={x.image}
                   alt={`Screenshot ${x.title}`}
@@ -80,28 +83,28 @@ export default function PortfolioPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/85 via-zinc-950/25 to-transparent" />
               </div>
             ) : (
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-white/5">
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-white/5">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,.25),transparent_55%),radial-gradient(circle_at_80%_10%,rgba(34,211,238,.18),transparent_60%)]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-transparent to-transparent" />
               </div>
             );
 
             const card = (
-              <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_0_80px_rgba(99,102,241,.08)] backdrop-blur transition hover:border-white/20 hover:bg-white/10">
+              <div className="glow-card group relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-[0_0_80px_rgba(99,102,241,.08)] backdrop-blur transition hover:border-white/20 hover:bg-white/10">
                 {top}
 
-                <div className="p-6">
+                <div className="p-5">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-xs font-semibold tracking-widest text-white/55">{x.category}</p>
-                      <p className="mt-2 text-xl font-semibold leading-snug">{x.title}</p>
+                      <p className="mt-2 text-lg font-semibold leading-snug">{x.title}</p>
                     </div>
                     {x.external ? <span className="text-xs text-white/45">external</span> : null}
                   </div>
 
                   <p className="mt-3 text-sm text-white/70">{x.desc}</p>
 
-                  <div className="mt-5 flex flex-wrap gap-2">
+                  <div className="mt-4 flex flex-wrap gap-2">
                     {x.stack.map((t) => (
                       <span
                         key={t}
@@ -112,8 +115,8 @@ export default function PortfolioPage() {
                     ))}
                   </div>
 
-                  <div className="mt-6">
-                    <span className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition group-hover:bg-white/15">
+                  <div className="mt-5">
+                    <span className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/10 px-3.5 py-2 text-sm font-semibold text-white transition group-hover:bg-white/15">
                       View <span className="text-white/70">→</span>
                     </span>
                   </div>

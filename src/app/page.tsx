@@ -33,6 +33,9 @@ export default function Home() {
             <a className="hover:text-white" href="/portfolio">
               Portfolio
             </a>
+            <a className="hover:text-white" href="/blog">
+              Blog
+            </a>
             <a className="hover:text-white" href="#contact">
               Kontak
             </a>
