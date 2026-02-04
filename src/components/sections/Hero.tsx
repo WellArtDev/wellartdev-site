@@ -3,7 +3,7 @@ import { site, whatsappHref } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-zinc-950 via-zinc-950 to-indigo-950/40 px-6 py-14 sm:px-10">
+    <section className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 px-6 py-14 shadow-[0_0_80px_rgba(99,102,241,.12)] backdrop-blur sm:px-10">
       <div className="absolute inset-0 opacity-40 [mask-image:radial-gradient(60%_60%_at_20%_0%,black,transparent)]">
         <div className="h-full w-full bg-[radial-gradient(circle_at_20%_0%,rgba(99,102,241,.35),transparent_55%),radial-gradient(circle_at_80%_20%,rgba(236,72,153,.25),transparent_60%)]" />
       </div>

@@ -8,3 +8,16 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
     "Segoe UI Emoji";
 }
+
+@keyframes splash-slide {
+  0% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(220%);
+  }
+}
+
+.animate-splash-slide {
+  animation: splash-slide 1.1s ease-in-out infinite;
+}
