@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function Icon({ name }: { name: "web" | "app" | "marketing" }) {
+function Icon({ name }: { name: "web" | "app" | "system" | "marketing" }) {
   if (name === "web") {
     return (
       <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,6 +25,22 @@ function Icon({ name }: { name: "web" | "app" | "marketing" }) {
         />
         <path d="M10 5h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
         <path d="M9 18h6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    );
+  }
+
+  if (name === "system") {
+    return (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2.75 3.5 7.5v9L12 21.25l8.5-4.75v-9L12 2.75Z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+        <path d="M12 12l8.5-4.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M12 12v9.25" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M12 12 3.5 7.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     );
   }
@@ -54,6 +70,12 @@ const services = [
     items: ["MVP build", "Dashboard/admin", "Integrasi API", "Maintenance"],
   },
   {
+    icon: "system" as const,
+    title: "System Development",
+    desc: "Sistem internal untuk operasional: ERP ringan, dashboard, integrasi, automasi, dan workflow yang rapi.",
+    items: ["Internal dashboard", "Workflow automation", "Integrasi API", "Reporting"],
+  },
+  {
     icon: "marketing" as const,
     title: "Digital Marketing",
     desc: "Bikin traffic yang tepat dan ukur hasilnya. Dari tracking sampai campaign.",
@@ -76,7 +98,7 @@ export function Services() {
         </Link>
       </div>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
+      <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {services.map((s) => (
           <div key={s.title} className="glow-card rounded-3xl border border-white/10 bg-white/5 p-6">
             <div className="flex items-center gap-3">
