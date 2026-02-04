@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react-hooks/set-state-in-effect */
+
 import { useEffect, useState } from "react";
 
 type Props = {
@@ -8,10 +10,22 @@ type Props = {
 };
 
 export function Splash({ brand = "WellArt.Dev", ms = 1200 }: Props) {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
+    const key = "wellartdev:splash_seen";
     const reduced = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+
+    // Only show once per session.
+    try {
+      const seen = window.sessionStorage.getItem(key);
+      if (seen) return;
+      window.sessionStorage.setItem(key, "1");
+    } catch {
+      // If sessionStorage is blocked, fall back to showing once.
+    }
+
+    setShow(true);
     const t = window.setTimeout(() => setShow(false), reduced ? 50 : ms);
     return () => window.clearTimeout(t);
   }, [ms]);
