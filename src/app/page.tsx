@@ -1,5 +1,6 @@
 import { Splash } from "@/components/Splash";
 import { Background } from "@/components/Background";
+import { BackToTop } from "@/components/BackToTop";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
 import { Proof } from "@/components/sections/Proof";
@@ -11,6 +12,7 @@ export default function Home() {
       <Splash />
       <Background />
       <div className="relative mx-auto max-w-6xl px-6 py-8 sm:px-10">
+        <BackToTop />
         <header className="flex items-center justify-between">
           <div className="text-sm font-semibold tracking-wide text-white">
             <span className="bg-gradient-to-r from-indigo-300 via-fuchsia-300 to-cyan-200 bg-clip-text text-transparent">
