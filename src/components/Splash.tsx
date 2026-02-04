@@ -45,7 +45,8 @@ export function Splash({ brand = "WellArt.Dev", ms = 1200 }: Props) {
         <div className="rounded-3xl border border-white/10 bg-white/5 p-8 text-center shadow-[0_0_80px_rgba(99,102,241,.15)] backdrop-blur">
           <div className="mx-auto h-12 w-12 rounded-2xl bg-gradient-to-br from-indigo-500/80 via-fuchsia-500/70 to-cyan-400/60 p-[1px]">
             <div className="grid h-full w-full place-items-center rounded-2xl bg-zinc-950">
-              <span className="text-sm font-semibold tracking-wide text-white">WA</span>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/wellartdev-logo.png" alt="WellArt.Dev" className="h-8 w-8 object-contain" />
             </div>
           </div>
           <p className="mt-4 text-sm font-semibold tracking-wide text-white">{brand}</p>
