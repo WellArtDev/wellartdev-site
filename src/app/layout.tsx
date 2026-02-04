@@ -14,24 +14,57 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wellartdev-site.vercel.app"),
-  title: "WellArt.Dev | Digital Excellence & Web Development Agency",
+
+  title: {
+    default: "Jasa Pembuatan Website, App & Digital Marketing | WellArt.Dev",
+    template: "%s | WellArt.Dev",
+  },
   description:
-    "Full-service agency untuk website, app/MVP, dan digital marketing — fokus konversi & trust dengan desain premium.",
+    "WellArt.Dev adalah agency full-service untuk UMKM, personal brand, startup & company: jasa pembuatan website (SEO & cepat), aplikasi/MVP, dan digital marketing. Fokus konversi, sales, dan desain premium.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
   icons: {
     icon: "/wellartdev-logo.png",
   },
+
   openGraph: {
-    title: "WellArt.Dev",
+    type: "website",
+    url: "/",
+    title: "Jasa Pembuatan Website, App & Digital Marketing | WellArt.Dev",
     description:
-      "Website, app/MVP, dan digital marketing — fokus konversi & trust dengan desain premium.",
+      "Agency full-service untuk UMKM, personal brand, startup & company. Website SEO & cepat, aplikasi/MVP, dan digital marketing—fokus konversi, sales, dan desain premium.",
+    siteName: "WellArt.Dev",
     images: [
       {
         url: "/wellartdev-logo.png",
         width: 1200,
         height: 630,
-        alt: "WellArt.Dev",
+        alt: "WellArt.Dev — Web & Digital Solutions",
       },
     ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Jasa Pembuatan Website, App & Digital Marketing | WellArt.Dev",
+    description:
+      "Website SEO & cepat, aplikasi/MVP, dan digital marketing—fokus konversi, sales, dan desain premium.",
+    images: ["/wellartdev-logo.png"],
   },
 };
 
