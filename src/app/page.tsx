@@ -19,9 +19,9 @@ export default function Home() {
         <header className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="rounded-xl border border-white/10 bg-white/5 p-2 backdrop-blur">
-              <Image src="/wellartdev-logo.svg" alt="WellArt.Dev logo" width={34} height={34} className="h-8 w-8" />
+              <Image src="/wellartdev-logo.svg" alt="WellArt.Dev logo" width={44} height={44} className="h-10 w-10" />
             </div>
-            <div className="text-sm font-semibold tracking-wide text-white">
+            <div className="text-base font-semibold tracking-wide text-white">
               <span className="bg-gradient-to-r from-indigo-300 via-fuchsia-300 to-cyan-200 bg-clip-text text-transparent">
                 WellArt.Dev
               </span>
