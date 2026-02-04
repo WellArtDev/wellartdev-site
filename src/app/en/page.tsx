@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { Splash } from "@/components/Splash";
@@ -37,12 +38,12 @@ export default function HomeEn() {
               Contact
             </a>
             <Link
-              className="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-base hover:bg-white/10"
+              className="ml-2 inline-flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 bg-white/5 hover:bg-white/10"
               href="/"
               aria-label="Ganti ke Bahasa Indonesia"
               title="Bahasa Indonesia"
             >
-              🇮🇩
+              <Image src="/flags/id.svg" alt="Bahasa Indonesia" width={20} height={20} className="h-5 w-5" />
             </Link>
           </nav>
         </header>
