@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 
 import { Splash } from "@/components/Splash";
 import { Background } from "@/components/Background";
@@ -8,43 +8,41 @@ import { Services } from "@/components/sections/Services";
 import { Proof } from "@/components/sections/Proof";
 import { CTA } from "@/components/sections/CTA";
 
-export default function Home() {
+export default function HomeEn() {
   return (
     <div className="relative min-h-screen bg-zinc-950 text-white">
       <Splash />
       <Background />
       <div className="relative mx-auto max-w-6xl px-6 py-8 sm:px-10">
         <BackToTop />
+
         <header className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="rounded-xl border border-white/10 bg-white/5 p-2 backdrop-blur">
-              <Image src="/wellartdev-logo.svg" alt="WellArt.Dev logo" width={34} height={34} className="h-8 w-8" />
-            </div>
-            <div className="text-sm font-semibold tracking-wide text-white">
-              <span className="bg-gradient-to-r from-indigo-300 via-fuchsia-300 to-cyan-200 bg-clip-text text-transparent">
-                WellArt.Dev
-              </span>
+            <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold tracking-wide text-white">
+              WellArt.Dev
             </div>
           </div>
+
           <nav className="flex items-center gap-4 text-sm text-white/70">
             <a className="hover:text-white" href="#services">
-              Layanan
+              Services
             </a>
-            <a className="hover:text-white" href="/portfolio">
+            <a className="hover:text-white" href="/en/portfolio">
               Portfolio
             </a>
-            <a className="hover:text-white" href="/blog">
+            <a className="hover:text-white" href="/en/blog">
               Blog
             </a>
-            <a className="hover:text-white" href="/en">
-              EN
-            </a>
             <a className="hover:text-white" href="#contact">
-              Kontak
+              Contact
             </a>
+            <Link className="hover:text-white" href="/">
+              ID
+            </Link>
           </nav>
         </header>
 
+        {/* Reuse sections for now; we'll translate copy next */}
         <main className="mt-8 space-y-6">
           <Hero />
           <Services />
@@ -52,9 +50,7 @@ export default function Home() {
           <CTA />
         </main>
 
-        <footer className="mt-10 border-t border-white/10 py-8 text-xs text-white/50">
-          © {new Date().getFullYear()} WellArt.Dev. Crafted for conversion.
-        </footer>
+        <footer className="mt-10 border-t border-white/10 py-8 text-xs text-white/50">© {new Date().getFullYear()} WellArt.Dev.</footer>
       </div>
     </div>
   );

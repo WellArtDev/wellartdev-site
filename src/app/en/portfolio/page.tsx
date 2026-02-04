@@ -2,8 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 function screenshot(url: string) {
-  // WordPress mShots: quick website thumbnails.
-  // Docs: https://developer.wordpress.com/docs/mshots/
   const u = encodeURIComponent(url);
   return `https://s0.wp.com/mshots/v1/${u}?w=1200`;
 }
@@ -21,38 +19,38 @@ const items: Item[] = [
   {
     title: "Mipro Indonesia",
     category: "E-commerce / Product Catalog",
-    desc: "Website produk & katalog untuk audio equipment / distributor.",
-    href: "/portfolio/mipro",
+    desc: "Product catalog website for audio equipment / distributor.",
+    href: "/en/portfolio/mipro",
     image: screenshot("https://mipro.co.id/"),
     stack: ["WordPress", "WooCommerce", "SEO"],
   },
   {
     title: "Agra Surya Energy",
     category: "Company Profile",
-    desc: "Company profile untuk renewable energy company, fokus trust & kredibilitas.",
-    href: "/portfolio/agra-surya-energy",
+    desc: "Company profile for a renewable energy company, focused on trust & credibility.",
+    href: "/en/portfolio/agra-surya-energy",
     image: screenshot("https://agrasuryaenergy.com/"),
     stack: ["WordPress", "Landing Page", "Performance"],
   },
   {
-    title: "Kantor Imigrasi Nunukan",
+    title: "Nunukan Immigration Office",
     category: "Government Website",
-    desc: "Website instansi: nunukan.imigrasi.go.id — informatif, rapi, dan mudah diakses.",
-    href: "/portfolio/imigrasi-nunukan",
+    desc: "Government site — clean, informative, and accessible.",
+    href: "/en/portfolio/imigrasi-nunukan",
     image: screenshot("https://nunukan.imigrasi.go.id/"),
     stack: ["Web CMS", "Accessibility", "Content"],
   },
   {
-    title: "Template Case Study",
+    title: "Case Study Template",
     category: "Template",
-    desc: "Template siap pakai biar kamu tinggal isi project dan jadi case study yang jualan.",
-    href: "/portfolio/case-study-template",
+    desc: "A ready-to-use structure to turn projects into sales-oriented case studies.",
+    href: "/en/portfolio/case-study-template",
     image: null,
     stack: ["Copywriting", "Structure", "Results"],
   },
 ];
 
-export default function PortfolioPage() {
+export default function PortfolioEn() {
   return (
     <div className="relative min-h-screen bg-zinc-950 text-white">
       <div className="mx-auto max-w-6xl px-6 py-14 sm:px-10">
@@ -66,11 +64,11 @@ export default function PortfolioPage() {
               </span>
             </h1>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/70">
-              Pilihan project yang nunjukin gaya kerja kita: modern, rapi, dan fokus ke trust + hasil.
+              Selected projects showcasing our style: modern, clean, and focused on trust + outcomes.
             </p>
           </div>
-          <Link href="/" className="mt-1 shrink-0 text-sm text-white/70 hover:text-white">
-            ← Kembali
+          <Link href="/en" className="mt-1 shrink-0 text-sm text-white/70 hover:text-white">
+            ← Back
           </Link>
         </div>
 
@@ -99,28 +97,22 @@ export default function PortfolioPage() {
                 <div className="shrink-0">{top}</div>
 
                 <div className="flex flex-1 flex-col p-5">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-semibold tracking-widest text-white/55">{x.category}</p>
-                      <p className="mt-2 text-lg font-semibold leading-snug">{x.title}</p>
-                    </div>
-                    {null}
+                  <div>
+                    <p className="text-xs font-semibold tracking-widest text-white/55">{x.category}</p>
+                    <p className="mt-2 text-lg font-semibold leading-snug">{x.title}</p>
                   </div>
 
                   <p className="mt-3 line-clamp-3 text-sm text-white/70">{x.desc}</p>
 
                   <div className="mt-4 flex flex-wrap gap-2">
                     {x.stack.map((t) => (
-                      <span
-                        key={t}
-                        className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-semibold text-white/70"
-                      >
+                      <span key={t} className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-semibold text-white/70">
                         {t}
                       </span>
                     ))}
                   </div>
 
-                  {/* no external CTA button */}
+                  <div className="mt-auto" />
                 </div>
               </div>
             );
